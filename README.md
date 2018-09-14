@@ -47,6 +47,9 @@ shell
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded! 
 ```
 6.gitlab-ci  
+环境变量配置：
+![gitlab-ci-var](./pics/gitlab-ci-variables.jpg) 
+gitlab-ci pipeline  
 ![gitlab-ci](./pics/gitlab-ci-job01.jpg)  
 已经封装好镜像，并把镜像推送到了harbor仓库，稍后可配合helm发布版本  
 ![harbor](./pics/harbor-01.jpg)
