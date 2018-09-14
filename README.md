@@ -25,6 +25,27 @@ useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 usermod -aG root gitlab-runner  
 echo "gitlab-runner ALL=(ALL) NOPASSWD: ALL">>/etc/sudoers  
 
+gitlab-runner注册   
+```
+[root@k8s-node01 ~]# gitlab-runner register
+Running in system-mode.                                                                              
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://192.168.101.xxx
+Please enter the gitlab-ci token for this runner:
+xxxxxxxxxxx
+Please enter the gitlab-ci description for this runner:
+[k8s-node01]: 
+Please enter the gitlab-ci tags for this runner (comma separated):
+k8s-images
+Whether to run untagged builds [true/false]:
+[false]: 
+Whether to lock Runner to current project [true/false]:
+[false]: 
+Registering runner... succeeded                     runner=uf3RXX2D
+Please enter the executor: shell, kubernetes, docker, docker-ssh, parallels, ssh, virtualbox, docker+machine, docker-ssh+machine:
+shell
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded! 
+```
 6.gitlab-ci  
 ![gitlab-ci](./pics/gitlab-ci-job01.jpg)  
 已经封装好镜像，并把镜像推送到了harbor仓库，稍后可配合helm发布版本  
