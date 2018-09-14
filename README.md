@@ -25,5 +25,7 @@ useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 usermod -aG root gitlab-runner
 echo "gitlab-runner ALL=(ALL) NOPASSWD: ALL">>/etc/sudoers
 
-6.
+6.gitlab-ci
 ![gitlab-ci](./pics/gitlab-ci-job01.jpg)
+已经封装好镜像，并把镜像推送到了harbor仓库，稍后可配合helm发布版本
+![harbor](./pics/harbor-01.jpg)
