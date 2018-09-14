@@ -25,7 +25,7 @@ useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 usermod -aG root gitlab-runner  
 echo "gitlab-runner ALL=(ALL) NOPASSWD: ALL">>/etc/sudoers  
 
-gitlab-runner注册   
+gitlab-runner注册                    
 ```
 [root@k8s-node01 ~]# gitlab-runner register
 Running in system-mode.                                                                              
