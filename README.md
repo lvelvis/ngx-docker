@@ -11,7 +11,7 @@ gitlab-ci 测试打包推送镜像
 # Linux arm
  wget -O /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-arm
 ```
-通过下面的地址你可以找到左右版本的二进制文件
+通过下面的地址你可以找到对应版本的二进制文件
 
 https://docs.gitlab.com/runner/install/bleeding-edge.html#download-any-other-tagged-release
 
@@ -24,3 +24,6 @@ useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 5、将gitlab ci用户添加到docker运行用户的组里面
 usermod -aG root gitlab-runner
 echo "gitlab-runner ALL=(ALL) NOPASSWD: ALL">>/etc/sudoers
+
+6.
+![gitlab-ci](./pics/gitlab-ci-job01.jpg)
